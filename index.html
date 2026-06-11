@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupplyPulse | Predictive Inventory Optimization</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                        },
+                        accent: '#10b981' // Emerald green for success metrics
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Animations & Gradients */
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #10b981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 70%);
+        }
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-slate-50">
+
+    <nav class="fixed w-full z-50 glass-panel border-b-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-layer-group text-primary-500 text-2xl"></i>
+                    <span class="font-bold text-2xl text-white tracking-tight">SupplyPulse</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="#roi" class="text-gray-300 hover:text-white transition">ROI</a>
+                    <a href="https://supplypulse.dev/docs" class="text-gray-300 hover:text-white transition">API Docs</a>
+                    <a href="#contact" class="bg-primary-500 hover:bg-primary-600 text-white px-5 py-2.5 rounded-lg font-medium transition shadow-lg shadow-primary-500/30">Book Demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-bg text-white pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-sm font-medium text-primary-400 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                    The New Standard for Retail Intelligence
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                    Stop Guessing.<br>
+                    <span class="gradient-text">Start Knowing.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                    SupplyPulse uses real-time sales data, local weather patterns, and viral social trends to tell you exactly what to stock, when, and where.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#" class="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-lg shadow-primary-500/25 flex items-center justify-center gap-2">
+                        Start 14-Day Free Trial <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://supplypulse.dev/docs" class="bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-code"></i> Read the Docs
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-20 relative max-w-5xl mx-auto">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent z-10 rounded-xl"></div>
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="SupplyPulse Dashboard" class="rounded-xl shadow-2xl border border-slate-700 opacity-90 object-cover h-[400px] w-full object-top">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 border-b border-gray-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">Trusted by modern supply chain teams</p>
+            <div class="flex flex-wrap justify-center gap-10 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition duration-500">
+                <i class="fa-brands fa-aws text-4xl"></i>
+                <i class="fa-brands fa-shopify text-4xl"></i>
+                <i class="fa-brands fa-stripe text-4xl"></i>
+                <i class="fa-brands fa-fedex text-4xl"></i>
+                <i class="fa-brands fa-dhl text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">You are hemorrhaging money on spreadsheets.</h2>
+                <p class="text-xl text-slate-600">Traditional forecasting looks at the past. But consumer demand lives in the present. If you rely on last year's Excel data, you are already behind.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-red-100 text-red-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-chart-line-down"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">The Cost of Stockouts</h3>
+                    <p class="text-slate-600">Missed revenue and frustrated customers when unpredictable, viral demand wipes out your shelves overnight.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-orange-100 text-orange-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">The Overstock Trap</h3>
+                    <p class="text-slate-600">Millions of dollars in working capital trapped in massive warehouses, gathering dust and depreciating in value.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:-translate-y-2 transition duration-300">
+                    <div class="w-14 h-14 bg-slate-100 text-slate-500 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-eye-slash"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Flying Blind</h3>
+                    <p class="text-slate-600">Being caught completely off-guard by sudden local weather changes, regional events, or fast-moving TikTok trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-20 text-center">
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Meet the AI that reads the future.</h2>
+                <p class="text-xl text-slate-600 max-w-2xl mx-auto">SupplyPulse ingests millions of real-time data points to calculate hyper-local demand with 98% accuracy.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Weather Data" class="rounded-2xl shadow-lg border border-slate-100">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="text-primary-500 font-bold tracking-wide uppercase mb-2">Feature 01</div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-4">Weather-Synchronized Stocking</h3>
+                    <p class="text-lg text-slate-600 mb-6">A sudden cold front is hitting Chicago next Tuesday. SupplyPulse automatically alerts your logistics team to route winter apparel to Midwest fulfillment centers <em>before</em> the storm hits.</p>
+                    <ul class="space-y-3 text-slate-700 font-medium">
+                        <li><i class="fa-solid fa-check text-accent mr-2"></i> Integrates directly with NOAA & global weather APIs.</li>
+                        <li><i class="fa-solid fa-check text-accent mr-2"></i> Automatically categorizes SKUs by climate dependency.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-24">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Social Media Trends" class="rounded-2xl shadow-lg border border-slate-100">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="text-primary-500 font-bold tracking-wide uppercase mb-2">Feature 02</div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-4">Social Sentiment & Trend Detection</h3>
+                    <p class="text-lg text-slate-600 mb-6">Is your product going viral on TikTok? Our Edge AI detects micro-trends in real-time, instantly adjusting your demand forecast so you can secure raw materials before your suppliers run out.</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c50a63?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Warehouse Automation" class="rounded-2xl shadow-lg border border-slate-100">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="text-primary-500 font-bold tracking-wide uppercase mb-2">Feature 03</div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-4">Automated Purchase Orders</h3>
+                    <p class="text-lg text-slate-600 mb-6">Stop playing catch-up. Set your threshold parameters, and let SupplyPulse automatically generate and send purchase orders to your suppliers the second inventory projections dip below your safety margins.</p>
+                    <a href="https://supplypulse.dev/docs" class="text-primary-600 font-semibold hover:text-primary-700 flex items-center gap-2">View API Documentation <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roi" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-primary-500 rounded-full blur-[120px] opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold text-center mb-16">Turn dead stock into liquid capital.</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-20">
+                <div class="text-center p-8 glass-panel rounded-2xl">
+                    <div class="text-5xl font-extrabold text-accent mb-2">-34%</div>
+                    <div class="text-slate-300 font-medium">Reduction in excess inventory holding costs.</div>
+                </div>
+                <div class="text-center p-8 glass-panel rounded-2xl">
+                    <div class="text-5xl font-extrabold text-primary-400 mb-2">+22%</div>
+                    <div class="text-slate-300 font-medium">Increase in revenue from captured peak-demand sales.</div>
+                </div>
+                <div class="text-center p-8 glass-panel rounded-2xl">
+                    <div class="text-5xl font-extrabold text-white mb-2">10x</div>
+                    <div class="text-slate-300 font-medium">Faster supply chain decision-making workflows.</div>
+                </div>
+            </div>
+
+            <div class="max-w-4xl mx-auto glass-panel p-10 md:p-14 rounded-3xl relative">
+                <i class="fa-solid fa-quote-left text-4xl text-primary-500 opacity-50 absolute top-8 left-8"></i>
+                <p class="text-xl md:text-2xl font-medium leading-relaxed text-center z-10 relative mb-8">
+                    "Before SupplyPulse, a viral influencer post would wipe out our stock for weeks. Now, the AI spots the trend on day one, and our inventory is automatically restocked before the public even notices. It feels like magic."
+                </p>
+                <div class="flex items-center justify-center gap-4">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Sarah J." class="w-14 h-14 rounded-full object-cover border-2 border-primary-500">
+                    <div class="text-left">
+                        <div class="font-bold">Sarah Jenkins</div>
+                        <div class="text-primary-400 text-sm">VP of Operations, Nova Retail</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gradient-to-br from-primary-600 to-accent text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">Ready to future-proof your inventory?</h2>
+            <p class="text-xl md:text-2xl opacity-90 mb-10">Join the predictive supply chain revolution. Get set up in minutes via our API, or let our onboarding team do the heavy lifting.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#" class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition shadow-xl w-full sm:w-auto">
+                    Start Your 14-Day Free Trial
+                </a>
+                <span class="text-sm font-medium opacity-80">No credit card required. Cancel anytime.</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-layer-group text-primary-500 text-xl"></i>
+                        <span class="font-bold text-xl text-white">SupplyPulse</span>
+                    </div>
+                    <p class="text-sm">Building the future of predictive retail intelligence and automated supply chains.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary-400 transition">Features</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition">Integrations</a></li>
+                        <li><a href="https://supplypulse.dev/api" class="hover:text-primary-400 transition">API Documentation</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition">ROI Calculator</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition">Case Studies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-primary-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-primary-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2023 SupplyPulse Inc. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
